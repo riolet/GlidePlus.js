@@ -78,6 +78,7 @@ Here is list of all available
 | `navItemClass` | `slider-nav__item` | string | Navigation item class
 | `navCurrentItemClass` | `slider-nav__item--current` | string | Current navigation item class
 | `keyboard` | `true` | bool | Slide on left/right keyboard arrows press
+| `mouseScrollWheel` | `true` | bool | Slide on mouse scroll wheel
 | `touchDistance` | `60` | int/bool | Minimal touch-swipe distance to call event. False for turning off touch.
 | `beforeInit` | `function(){}` | function | Callback before plugin init
 | `afterInit` | `function(){}` | function | Callback after plugin init
