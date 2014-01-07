@@ -64,6 +64,9 @@
             // {Bool} Slide on left/right keyboard arrows press
             keyboard: true,
 
+            // {Bool} Slide on left/right on mouse wheel
+            mouseScrollWheel: true,
+
             // {Int or Bool} Touch settings
             touchDistance: 60,
 
@@ -133,6 +136,45 @@
             });
         }
 
+        /**
+         * Controller
+         * Mouse Scroll Wheel
+         */
+        if (_.options.mouseScrollWheel) {
+            //Mouse wheel
+            //Firefox
+            $(document).bind('DOMMouseScroll', function (e) {
+                if (e.originalEvent.detail > 0) {
+                    //scroll down
+                    _.slide(1);
+                    console.log('Down');
+                } else {
+                    //scroll up
+                    _.slide(-1)
+                    console.log('Up');
+                }
+
+                //prevent page fom scrolling
+                return false;
+            });
+
+            //IE, Opera, Safari
+            $(document).bind('mousewheel', function (e) {
+                if (e.originalEvent.wheelDelta < 0) {
+                    //scroll down
+                    _.slide(1);
+                    console.log('Down');
+                } else {
+                    //scroll up
+                    _.slide(-1)
+                    console.log('Up');
+                }
+
+                //prevent page fom scrolling
+                return false;
+            });
+        }
+        
         /**
          * Controller
          * Mouse over slider
@@ -432,7 +474,7 @@
         // Callbacks before slide change
         _.options.beforeTransition.call(_);
 
-        // Setup variables 
+        // Setup variables
         var	currentSlide = (jump) ? 0 : _.currentSlide,
             slidesLength = -(_.slides.length-1),
             navCurrentClass = _.options.navCurrentItemClass,
