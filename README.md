@@ -111,6 +111,10 @@ glide.jump(3, console.log('Wooo!'));
 
 
 ##Changelog
+`1.0.6` / `25.11.2013`
+
+- Added mouse scroll wheel support
+
 `1.0.5` / `25.11.2013`
 
 - Added after and before transition callbacks
