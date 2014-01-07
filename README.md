@@ -14,7 +14,7 @@ jQuery is the only dependency. Make sure to include it.
 ###2. Include Glide.js
 
 ``` html
-<script src="jquery.glide.js"></script>
+<script src="jquery.glideplus.js"></script>
 ```
 
 ###3. Make necessary markup
@@ -142,4 +142,4 @@ glide.jump(3, console.log('Wooo!'));
 - Plugin release
 
 ##License
-Glide is Copyright © 2013 [Jędrzej Chałubek](http://jedrzejchalubek.com) and is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Glide is Copyright © 2013 [Riolet Corporation](http://riolet.com) and is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
