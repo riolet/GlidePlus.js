@@ -111,7 +111,7 @@ glide.jump(3, console.log('Wooo!'));
 
 
 ##Changelog
-`1.0.6` / `25.11.2013`
+`1.0.6` / `07.01.2014`
 
 - Added mouse scroll wheel support
 
